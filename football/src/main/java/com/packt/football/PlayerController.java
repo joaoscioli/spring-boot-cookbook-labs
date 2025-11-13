@@ -1,5 +1,11 @@
 package com.packt.football;
 
+import com.packt.football.exceptions.AlreadyExistsException;
+import com.packt.football.exceptions.NotFoundException;
+import com.packt.football.model.Player;
+import com.packt.football.services.FootballService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -7,29 +13,47 @@ import java.util.List;
 
 @RequestMapping("/players") @RestController
 public class PlayerController {
+
+    private FootballService footballService;
+
+    public PlayerController(FootballService footballService) {
+        this.footballService = footballService;
+    }
+
     @GetMapping
-    public List<String> listPlayers() {
-        return List.of("Ivana ANDRES", "Alexia PUTELLAS");
+    public List<Player> listPlayers() {
+        return footballService.listPlayers();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Player> readPlayer(@PathVariable String id) {
+        try {
+            Player player = footballService.getPlayer(id);
+            return new ResponseEntity<>(player, HttpStatus.OK);
+        } catch (NotFoundException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @PostMapping
-    public String createPlayer(@RequestBody String name) {
-        return "Player " + name + " created";
+    public void createPlayer(@RequestBody Player player) {
+        footballService.addPlayer(player);
     }
 
-    @GetMapping("/{name}")
-    public String readPlayer(@PathVariable String name) {
-        return name;
+    @PutMapping("/{id}")
+    public void updatePlayer(@PathVariable String id, @RequestBody Player player) {
+        footballService.updatePlayer(player);
     }
 
-    @DeleteMapping("/{name}")
-    public String deletePlayer(@PathVariable String name) {
-        return "Player " + name + " deleted";
+    @DeleteMapping("/{id}")
+    public void deletePlayer(@PathVariable String id) {
+        footballService.deletePlayer(id);
     }
 
-    @PutMapping("/{name}")
-    public String updatePlayer(@PathVariable String name, @RequestBody String newName) {
-        return "Player " + name + " updated to " + newName;
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Already exists")
+    @ExceptionHandler(AlreadyExistsException.class)
+    public void alreadyExistsException() {
     }
+
 
 }
