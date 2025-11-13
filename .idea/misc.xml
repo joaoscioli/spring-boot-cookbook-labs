@@ -6,6 +6,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/football/pom.xml" />
+        <option value="$PROJECT_DIR$/albums/pom.xml" />
       </list>
     </option>
   </component>
