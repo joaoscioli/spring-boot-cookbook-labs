@@ -1,12 +1,19 @@
 server:
   port: 9000
 
+logging:
+  level:
+    org.springframework.security: trace
+
 spring:
   security:
+    user:
+      name: "user"
+      password: "password"
     oauth2:
       authorizationserver:
         client:
-          basic-client:
+          football:
             registration:
               client-id: "football"
               client-secret: "{noop}SuperSecret"
@@ -17,4 +24,21 @@ spring:
               scopes:
                 - "football:read"
                 - "football:admin"
-
+          football-ui:
+            registration:
+              client-id: "football-ui"
+              client-secret: "{noop}TheSecretSauce"
+              client-authentication-methods:
+                - "client_secret_basic"
+              authorization-grant-types:
+                - "authorization_code"
+                - "refresh_token"
+                - "client_credentials"
+              redirect-uris:
+                - "http://localhost:9080/login/oauth2/code/football-ui"
+              scopes:
+                - "openid"
+                - "profile"
+                - "football:read"
+                - "football:admin"
+            require-authorization-consent: true
