@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="footballresource" />
         <module name="albums" />
         <module name="football" />
         <module name="footballauth" />
@@ -19,6 +20,7 @@
       <module name="albumsTwo" options="-parameters" />
       <module name="football" options="-parameters" />
       <module name="footballauth" options="-parameters" />
+      <module name="footballresource" options="-parameters" />
     </option>
   </component>
 </project>
