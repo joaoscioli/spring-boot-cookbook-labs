@@ -16,3 +16,5 @@ spring:
                 - "client_credentials"
               scopes:
                 - "football:read"
+                - "football:admin"
+
