@@ -42,3 +42,4 @@ spring:
                 - "football:read"
                 - "football:admin"
             require-authorization-consent: true
+        
