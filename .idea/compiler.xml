@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="fooballobs" />
+        <module name="footballobs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,9 +22,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="albums" options="-parameters" />
       <module name="albumsTwo" options="-parameters" />
-      <module name="fooballobs" options="-parameters" />
       <module name="football" options="-parameters" />
       <module name="footballauth" options="-parameters" />
+      <module name="footballobs" options="-parameters" />
       <module name="footballresource" options="-parameters" />
       <module name="footballui" options="-parameters" />
     </option>

@@ -1,10 +1,10 @@
 package com.packt.footballobs.actuator;
 
-import com.packt.footballobs.service.FileLoader;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
 
+import com.packt.footballobs.service.FileLoader;
 
 @Endpoint(id = "football")
 public class FootballCustomEndpoint {
