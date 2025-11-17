@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="footballresource" />
-        <module name="albums" />
-        <module name="footballauth" />
-        <module name="albumsTwo" />
         <module name="fooballobs" />
-        <module name="footballui" />
-        <module name="football" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="albums" target="21" />
+      <module name="albumsTwo" target="21" />
+      <module name="football" target="21" />
+      <module name="footballauth" target="21" />
+      <module name="footballresource" target="21" />
+      <module name="footballui" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
