@@ -1,4 +1,4 @@
-package com.packt.fooballobs;
+package com.packt.footballobs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

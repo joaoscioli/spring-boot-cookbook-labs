@@ -1,4 +1,4 @@
-package com.packt.fooballobs;
+package com.packt.footballobs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,29 +1,31 @@
-package com.packt.fooballobs;
+package com.packt.footballobs.actuator;
 
+import com.packt.footballobs.service.FileLoader;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
 
+
 @Endpoint(id = "football")
 public class FootballCustomEndpoint {
-    private FileLoader fileLoader;;
 
-    FootballCustomEndpoint(FileLoader fileLoader) {
+    private FileLoader fileLoader;
+
+    public FootballCustomEndpoint(FileLoader fileLoader){
         this.fileLoader = fileLoader;
     }
 
     @ReadOperation
-    public String getFileVersion() {
+    public String getFileVersion(){
         return fileLoader.getFileName();
     }
 
     @WriteOperation
-    public void refreshFile() {
+    public void refreshFile(){
         try {
             fileLoader.loadFile();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 }
