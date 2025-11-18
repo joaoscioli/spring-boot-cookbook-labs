@@ -1,5 +1,8 @@
 management:
   endpoints:
+    health:
+      probes:
+        enabled: true
     web:
       exposure:
         include: health,env,metrics,beans,loggers,football
