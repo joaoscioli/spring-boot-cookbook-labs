@@ -1,13 +1,11 @@
 package com.packt.footballobs.configuration;
 
-import java.io.IOException;
-
+import com.packt.footballobs.actuator.FootballCustomEndpoint;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.packt.footballobs.actuator.FootballCustomEndpoint;
-import com.packt.footballobs.service.FileLoader;
+import java.io.IOException;
 
 @Configuration
 public class FootballConfiguration {
@@ -16,12 +14,12 @@ public class FootballConfiguration {
     private String folder;
 
     @Bean
-    public FileLoader fileLoader() throws IOException{
+    public FileLoader fileLoader() throws IOException {
         return new FileLoader(folder);
     }
 
     @Bean
-    public FootballCustomEndpoint footballCustomEndpoint(FileLoader fileLoader){
+    public FootballCustomEndpoint footballCustomEndpoint(FileLoader fileLoader) {
         return new FootballCustomEndpoint(fileLoader);
     }
 }

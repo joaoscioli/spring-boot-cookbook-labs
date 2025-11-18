@@ -1,4 +1,4 @@
-package com.packt.footballobs;
+package com.packt.footballobs.service;
 
 import org.springframework.boot.availability.AvailabilityChangeEvent;
 import org.springframework.boot.availability.LivenessState;
@@ -9,6 +9,7 @@ import java.util.Random;
 
 @Service
 public class TradingService {
+
     private ApplicationEventPublisher applicationEventPublisher;
 
     public TradingService(ApplicationEventPublisher applicationEventPublisher) {
@@ -22,10 +23,11 @@ public class TradingService {
 
     public int tradeCards(int orders) {
         if (getPendingOrders() > 90) {
-            AvailabilityChangeEvent.publish(applicationEventPublisher, new Exception("There are more than 90 pending orders"),
-                    LivenessState.BROKEN);
+            AvailabilityChangeEvent.publish(applicationEventPublisher,
+                    new Exception("There are more than 90 pending orders"), LivenessState.BROKEN);
         } else {
-            AvailabilityChangeEvent.publish(applicationEventPublisher, new Exception("working fine"), LivenessState.CORRECT);
+            AvailabilityChangeEvent.publish(applicationEventPublisher,
+                    new Exception("working fine"), LivenessState.CORRECT);
         }
         return orders;
     }

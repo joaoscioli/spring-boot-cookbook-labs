@@ -1,4 +1,4 @@
-package com.packt.footballobs;
+package com.packt.footballobs.health;
 
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
@@ -21,7 +21,9 @@ public class FootballHealthIndicator implements HealthIndicator {
             template.execute("SELECT 1");
             return Health.up().build();
         } catch (DataAccessException e) {
-            return Health.down().withDetail("Cannot connect to database.", e).build();
+            return Health.down().withDetail("Cannot connect to database", e).build();
         }
+
     }
+
 }

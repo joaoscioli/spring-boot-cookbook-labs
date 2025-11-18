@@ -1,10 +1,10 @@
-package com.packt.fooballobs;
+package com.packt.footballobs;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FooballobsApplicationTests {
+class FootballobsApplicationTests {
 
     @Test
     void contextLoads() {
