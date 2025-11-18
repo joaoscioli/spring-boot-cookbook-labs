@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="footballobs" />
+        <module name="fooballclient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="albums" options="-parameters" />
       <module name="albumsTwo" options="-parameters" />
+      <module name="fooballclient" options="-parameters" />
       <module name="football" options="-parameters" />
       <module name="footballauth" options="-parameters" />
       <module name="footballobs" options="-parameters" />

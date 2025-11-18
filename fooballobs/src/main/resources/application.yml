@@ -1,10 +1,15 @@
 spring:
+  application:
+    name: trading-service
   datasource:
     url: jdbc:postgresql://localhost:5432/football
     username: packt
     password: packt
 
 management:
+  tracing:
+    sampling:
+      probability: 1.0
   endpoints:
     health:
       probes:
