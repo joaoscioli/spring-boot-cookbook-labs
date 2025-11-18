@@ -1,3 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/football
+    username: packt
+    password: packt
+
 management:
   endpoints:
     health:
