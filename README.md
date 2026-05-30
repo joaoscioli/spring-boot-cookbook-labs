@@ -1,5 +1,20 @@
 # 🍳 Spring Boot 3.0 Cookbook Labs
 
+## Portfolio Positioning
+
+This repository is maintained as a Spring Boot practice lab. Its purpose is to
+capture focused experiments, recipes, and applied learning around backend
+engineering topics such as REST APIs, security, persistence, observability,
+Docker, tests, and CI/CD.
+
+It is useful as supporting evidence of continuous practice. My curated
+portfolio projects remain the best place to evaluate end-to-end ownership,
+architecture, documentation, and production-oriented implementation quality.
+
+**Repository type:** Spring Boot lab  
+**Primary focus:** practical backend recipes and experiments  
+**Portfolio role:** supporting practice repository
+
 > Hands-on implementations inspired by *Spring Boot 3.0 Cookbook: Proven Recipes for Building Modern and Robust Java Web Applications.*
 
 ## 🚀 Overview
