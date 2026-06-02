@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: product-catalog-api
+  datasource:
+    url: jdbc:h2:mem:product_catalog
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
