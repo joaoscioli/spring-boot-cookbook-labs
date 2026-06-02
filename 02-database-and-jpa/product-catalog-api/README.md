@@ -18,6 +18,7 @@ Implemented in the first slice:
 - request validation
 - Flyway migration
 - OpenAPI / Swagger UI
+- Docker image build
 - H2 test profile
 - MockMvc API tests
 
@@ -33,6 +34,20 @@ Then open:
 
 - Swagger UI: `http://localhost:8080/swagger-ui.html`
 - OpenAPI JSON: `http://localhost:8080/v3/api-docs`
+
+## Run With Docker
+
+Build the image:
+
+```bash
+docker build -t product-catalog-api .
+```
+
+Run the container:
+
+```bash
+docker run --rm -p 8080:8080 product-catalog-api
+```
 
 ## API Surface
 
@@ -81,5 +96,6 @@ This lab is a focused practice project for:
 - entity mapping;
 - validation;
 - API documentation;
+- containerized execution;
 - API behavior tests;
 - small commit discipline.
