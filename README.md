@@ -41,6 +41,15 @@ spring-boot-cookbook-labs/
 ````
 
 
+## Active Labs
+
+### 02 - Database and JPA: Product Catalog API
+Focused Spring Boot lab for a small product catalog REST API using Java 21,
+Spring Data JPA, Flyway migrations, validation, H2, and MockMvc integration
+tests.
+
+Path: [`02-database-and-jpa/product-catalog-api`](02-database-and-jpa/product-catalog-api)
+
 ## 💻 Tech Stack
 - **Java 21**
 - **Spring Boot 3**
