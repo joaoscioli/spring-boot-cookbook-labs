@@ -17,8 +17,22 @@ Implemented in the first slice:
 - Product REST controller
 - request validation
 - Flyway migration
+- OpenAPI / Swagger UI
 - H2 test profile
 - MockMvc API tests
+
+## API Documentation
+
+Run the application:
+
+```bash
+mvn spring-boot:run
+```
+
+Then open:
+
+- Swagger UI: `http://localhost:8080/swagger-ui.html`
+- OpenAPI JSON: `http://localhost:8080/v3/api-docs`
 
 ## API Surface
 
@@ -66,5 +80,6 @@ This lab is a focused practice project for:
 - relational schema design;
 - entity mapping;
 - validation;
+- API documentation;
 - API behavior tests;
 - small commit discipline.
