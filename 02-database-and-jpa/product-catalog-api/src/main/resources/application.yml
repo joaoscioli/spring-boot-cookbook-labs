@@ -10,9 +10,9 @@ spring:
     hibernate:
       ddl-auto: validate
     open-in-view: false
+  flyway:
+    enabled: true
 
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
-  flyway:
-    enabled: true

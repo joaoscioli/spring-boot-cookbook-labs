@@ -19,6 +19,7 @@ Implemented in the first slice:
 - Flyway migration
 - OpenAPI / Swagger UI
 - Docker image build
+- Docker Compose with PostgreSQL
 - H2 test profile
 - MockMvc API tests
 
@@ -47,6 +48,23 @@ Run the container:
 
 ```bash
 docker run --rm -p 8080:8080 product-catalog-api
+```
+
+## Run With PostgreSQL
+
+Start the API and PostgreSQL together:
+
+```bash
+docker compose up --build
+```
+
+The compose setup uses the `local-postgres` Spring profile and applies Flyway
+migrations against PostgreSQL.
+
+Stop and remove containers:
+
+```bash
+docker compose down
 ```
 
 ## API Surface
@@ -97,5 +115,6 @@ This lab is a focused practice project for:
 - validation;
 - API documentation;
 - containerized execution;
+- PostgreSQL local environment;
 - API behavior tests;
 - small commit discipline.
